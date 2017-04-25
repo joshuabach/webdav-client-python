@@ -88,7 +88,7 @@ class Client(object):
             header = list()
 
         if self.webdav.token:
-            webdav_token = "Authorization: OAuth {token}".format(token=self.webdav.token)
+            webdav_token = "Authorization: Bearer {token}".format(token=self.webdav.token)
             header.append(webdav_token)
 
         return header
